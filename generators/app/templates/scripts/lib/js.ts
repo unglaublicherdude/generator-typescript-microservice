@@ -31,3 +31,7 @@ export async function clearTranspiledJS() {
     });
   });
 }
+
+export async function lintSource() {
+  return asyncExec(`tslint src/**/*`);
+}
