@@ -11,7 +11,7 @@
   <%- module %> <%- browser %>
   "typings": "lib/index.d.ts",
   "scripts": {
-    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "lint": "tslint --force --format verbose --project tsconfig.json \"src/**/*.ts\"",
     "build": "./node_modules/.bin/ts-node ./scripts/build.ts",
     "deps": "./node_modules/.bin/ts-node ./scripts/deps.ts",
     "deps:reset": "./node_modules/.bin/ts-node ./scripts/reset.ts",
