@@ -1,5 +1,5 @@
 // tslint:disable:no-implicit-dependencies
-import ping from "../src/ping");
+import * as ping from "../src/handlers/ping";
 import * as chai from "chai";
 
 const expect = chai.expect;
