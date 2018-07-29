@@ -33,5 +33,5 @@ export async function clearTranspiledJS() {
 }
 
 export async function lintSource() {
-  return asyncExec(`tslint src/**/*.ts src/**/*.js`);
+  return asyncExec(`tslint --force --format verbose --project tsconfig.json \"src/**/*.ts\"`);
 }
