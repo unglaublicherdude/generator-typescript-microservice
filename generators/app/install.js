@@ -35,7 +35,8 @@ function install(context) {
         "typescript",
         "ts-node",
         "test-console",
-        "simple-git"
+        "simple-git",
+        "tslint-config-airbnb"
     ];
     const serverlessOnlyDevDeps = [
         "serverless",

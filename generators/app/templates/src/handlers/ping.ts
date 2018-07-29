@@ -3,8 +3,8 @@ import {
   LambdaCallback,
   IAWSLambdaProxyIntegrationRequest,
   getBodyFromPossibleLambdaProxyRequest,
-  AWSGatewayStatusCode
-} from "common-types";
+  AWSGatewayStatusCode,
+} from 'common-types';
 
 /**
  * Ping
@@ -19,14 +19,14 @@ import {
 export function handler(
   event: IAWSLambdaProxyIntegrationRequest,
   context: IDBArrayKey,
-  callback: LambdaCallback
+  callback: LambdaCallback,
 ) {
-  console.log("EVENT\n", JSON.stringify(event, null, 2));
+  console.log('EVENT\n', JSON.stringify(event, null, 2));
   const message = getBodyFromPossibleLambdaProxyRequest(event);
   callback(null, {
     statusCode: AWSGatewayStatusCode.Success,
     body: {
-      foo: 'bar'
-    }
-  })
+      foo: 'bar',
+    },
+  });
 }

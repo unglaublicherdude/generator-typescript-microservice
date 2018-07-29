@@ -11,7 +11,6 @@
   <%- module %> <%- browser %>
   "typings": "lib/index.d.ts",
   "scripts": {
-    "clean": "rimraf lib",
     "lint": "tslint --force --format verbose \"src/**/*.ts\"",
     "build": "./node_modules/.bin/ts-node ./scripts/build.ts",
     "deps": "./node_modules/.bin/ts-node ./scripts/deps.ts",
