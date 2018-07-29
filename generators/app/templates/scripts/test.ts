@@ -1,15 +1,9 @@
 // tslint:disable:no-implicit-dependencies
 import chalk from "chalk";
-import { exec, asyncExec, find } from "async-shelljs";
-import * as rm from "rimraf";
+import { asyncExec, find } from "async-shelljs";
 import * as process from "process";
 import "../test/testing/test-console";
-import { stdout, stderr } from "test-console";
-import { transpileJavascript, clearTranspiledJS, lintSource } from "./lib/js";
-
-function prepOutput(output: string) {
-  return output.replace(/\t\r\n/, "").replace("undefined", "");
-}
+import {lintSource } from "./lib/js";
 
 function scriptNames(scripts: string[], splitter = ", ") {
   return scripts.map(script => {
@@ -20,7 +14,6 @@ function scriptNames(scripts: string[], splitter = ", ") {
 }
 
 async function findScripts(terms: string[]) {
-  const scripts = [];
   if (terms.length === 0) {
     return [];
   }
